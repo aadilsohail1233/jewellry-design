@@ -1,6 +1,7 @@
-import { CyoDesignLogo } from './logo'
 import { MailIcon, PhoneIcon } from 'lucide-react'
+import FixedTopBar from './FixedTopBar'
 import { LanguageSwitcherSheet } from './language-switcher-sheet'
+import { CyoDesignLogo } from './logo'
 import { MenuSheet } from './menu-sheet'
 
 type HeaderProps = {
@@ -9,6 +10,9 @@ type HeaderProps = {
 
 export const Header = ({ locale }: HeaderProps) => {
 	return (
+		<>
+		<FixedTopBar/>
+		
 		<header className='flex justify-between items-center px-4 md:px-10 pt-2 md:pt-8 relative z-20'>
 			<div>
 				<MenuSheet locale={locale} />
@@ -26,5 +30,6 @@ export const Header = ({ locale }: HeaderProps) => {
 				</a>
 			</div>
 		</header>
+		</>
 	)
 }

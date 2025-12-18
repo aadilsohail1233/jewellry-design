@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from 'react'
-import { gallerySpecs } from '~/lib/gallery-specs'
 import Autoplay from 'embla-carousel-autoplay'
+import { useEffect, useRef, useState } from 'react'
 import type { CarouselApi } from '~/components/ui/carousel'
 import { getLocalePath, getTranslationForLocale } from '~/i18n/ui'
+import { gallerySpecs } from '~/lib/gallery-specs'
 
 import { Card, CardContent } from '~/components/ui/card'
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '~/components/ui/carousel'
+import { Carousel, CarouselContent, CarouselItem } from '~/components/ui/carousel'
 
 interface Props {
 	locale?: string
@@ -77,8 +77,8 @@ const GalleryCarousel: React.FC<Props> = ({ locale = 'en' }) => {
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious className='hidden md:block' />
-				<CarouselNext className='hidden md:block' />
+				{/* <CarouselPrevious className='hidden lg:block' />
+				<CarouselNext className='hidden lg:block' /> */}
 			</Carousel>
 			<div className='mt-2 flex flex-col items-center gap-8 py-4'>
 				<div className='flex items-center justify-center gap-2'>
