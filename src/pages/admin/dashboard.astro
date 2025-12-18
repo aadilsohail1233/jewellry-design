@@ -1,0 +1,41 @@
+---
+import { DASHBOARD_AUTH } from 'astro:env/server'
+import { AdminDashboard } from '~/components/admin-dashboard'
+
+// Basic Auth Check
+const auth = Astro.request.headers.get('Authorization')
+
+if (!auth) {
+	return new Response('Unauthorized', {
+		status: 401,
+		headers: {
+			'WWW-Authenticate': 'Basic realm="Admin Area"',
+		},
+	})
+}
+
+const base64Credentials = auth.split(' ')[1]
+const credentials = atob(base64Credentials)
+const [username, password] = credentials.split(':')
+
+if (username !== 'admin' || password !== DASHBOARD_AUTH) {
+	return new Response('Unauthorized', {
+		status: 401,
+		headers: {
+			'WWW-Authenticate': 'Basic realm="Admin Area"',
+		},
+	})
+}
+
+const basicAuthString = `${username}:${password}`
+---
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CYO Design</title>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<AdminDashboard client:load basicAuthString={basicAuthString} />
+</body>

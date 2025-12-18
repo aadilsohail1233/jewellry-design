@@ -1,0 +1,62 @@
+# Infra Related Files
+
+## Add Cors Policy 
+
+```bash
+aws s3api put-bucket-cors \
+  --bucket cyodesign \
+  --endpoint-url https://fsn1.your-objectstorage.com \
+  --cors-configuration '{
+    "CORSRules": [{
+      "AllowedOrigins": [
+			"http://localhost",
+			"http://localhost:3000",
+			"http://localhost:4321",
+			"http://localhost:5173",
+			"http://localhost:8080",
+			"https://cyodesign.com",
+			"https://*.cyodesign.com"
+		],
+      "AllowedMethods": ["GET", "PUT", "POST", "DELETE", "HEAD"],
+      "AllowedHeaders": ["*"]
+    }]
+  }'
+```
+
+## SSH Access
+
+```bash
+ssh -i ~/.ssh/cyodesign root@cyodesign.com "sudo su - cyo"
+```
+
+## deploy
+
+```bash
+cd cyodesign
+git pull
+pnpm i
+pnpm build
+pm2 restart ecosystem.config.cjs
+```
+
+## DB Tunnel
+
+
+### Connect 
+
+```bash
+ssh -t -L 8900:localhost:8900 -i ~/.ssh/cyodesign root@cyodesign.com "sudo su - cyo"
+```
+
+### Install Turso
+
+```bash
+curl -sSfL https://get.tur.so/install.sh | bash
+```
+
+### Run Server
+
+```bash
+cd cyodesign
+turso dev --db-file .db/main.db --port 8900
+```
