@@ -29,16 +29,44 @@ export const MenuSheet = ({ locale }: MenuSheetProps) => {
 				<SheetHeader>
 				</SheetHeader>
 				<div className='flex flex-col gap-4 p-8 font-didot'>
-				
+					<a href='#assistant' onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-2xl font-semibold'>{ui['assistant.assistant']}</h1>
+					</a>
+					<a href='#gallery' onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-2xl font-semibold'>{ui['nav.gallery']}</h1>
+					</a>
+					<a href='#collection' onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-2xl font-semibold'>{ui['collection.collection']}</h1>
+					</a>
+						<a href={`${websiteUrl}/collections/rings`} onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-xl font-normal ms-2'>{ui['collection.rings']}</h1>
+					</a>
+						<a href={`${websiteUrl}/collections/necklaces`} onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-xl font-normal ms-2'>{ui['collection.necklaces']}</h1>
+					</a>
+						<a href={`${websiteUrl}/collections/gifts`} onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-xl font-normal ms-2'>{ui['collection.gifts']}</h1>
+					</a>
+						<a href={`${websiteUrl}/collections/bracelets`} onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-xl font-normal ms-2'>{ui['collection.bracelets']}</h1>
+					</a>
+						<a href={`${websiteUrl}/collections/pendants`} onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-xl font-normal ms-2'>{ui['collection.pendants']}</h1>
+					</a>
+						<a href={`${websiteUrl}/collections/earrings`} onClick={() => setIsMenuSheetOpen(false)}>
+						<h1 className='text-xl font-normal ms-2'>{ui['collection.earrings']}</h1>
+					</a>
+					
+					
+					
+					
 					<a href='#about' onClick={() => setIsMenuSheetOpen(false)}>
 						<h1 className='text-2xl font-semibold'>{ui['aboutus.aboutus']}</h1>
 					</a>
 					<a href={`${websiteUrl}/collections`} onClick={() => setIsMenuSheetOpen(false)}>
 						<h1 className='text-2xl font-semibold'>{ui['nav.shop']}</h1>
 					</a>
-					<a href='#gallery' onClick={() => setIsMenuSheetOpen(false)}>
-						<h1 className='text-2xl font-semibold'>{ui['nav.gallery']}</h1>
-					</a>
+					
 					<a href='#contact'>
 						<Button variant='default' className='' onClick={() => setIsMenuSheetOpen(false)}>
 							<h1 className='text-xl font-semibold'>{ui['lead.title']}</h1>

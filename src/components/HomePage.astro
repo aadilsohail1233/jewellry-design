@@ -5,6 +5,7 @@ import GalleryCarousel from '~/components/gallery-carousel'
 import { Header } from '~/components/header'
 import { StepsTimeline } from '~/components/steps-timeline'
 import Collections from './collections'
+import Footer from './footer'
 
 interface Props {
 	locale: string
@@ -31,11 +32,11 @@ const ui = getTranslationForLocale(locale ?? 'en')
 	{/* HERO SECTION WITH VIDEO BG */}
 	<section class="relative h-[100vh] flex flex-col overflow-hidden">
 		<!-- <div class="absolute inset-0 w-full h-full object-cover bg-primary-dark" /> -->
-		<video preload="auto" class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+		<!-- <video preload="auto" class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
 			<source src="https://fsn1.your-objectstorage.com/cyodesign/assets/hero/hero-v2.mp4" type="video/mp4" />
-		</video>
+		</video> -->
 		{/* Overlay for readability */}
-		<!-- <div class="absolute inset-0 bg-emerald-900/40"></div> -->
+		<div class="absolute inset-0 bg-emerald-900/40"></div>
 
 		{/* Navigation/Header */}
 		<Header locale={locale} client:load />
@@ -80,7 +81,7 @@ const ui = getTranslationForLocale(locale ?? 'en')
 		</div>
 	</section>
 		{/* Collection */}
-			<section  class="w-full mb-24">
+			<section id="collection" class="w-full mb-24">
 		<div class="max-w-7xl mx-auto">
 			<h2 class="text-4xl font-didot text-center mb-8 pt-12">{ui['collection.title']}</h2>
 			<Collections locale={locale ?? 'en'} client:only />
@@ -176,7 +177,8 @@ const ui = getTranslationForLocale(locale ?? 'en')
 	</section>
 
 	{/* FOOTER */}
-	<footer class="bg-primary-dark text-gray-100 py-8">
+	<Footer locale={locale} client:load />
+	<!-- <footer class="bg-primary-dark text-gray-100 py-8">
 		<div class="flex flex-row justify-around items-center align-middle px-6">
 			<div class="flex items-center align-middle gap-4 md:mb-0">
 				<a href={locale === 'de' ? '/de' : '/'} class="font-didot text-xl text-white">CYO Design</a>
@@ -206,7 +208,7 @@ const ui = getTranslationForLocale(locale ?? 'en')
 				</a>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 </body>
 <script type="module">
 document.addEventListener('DOMContentLoaded', () => {

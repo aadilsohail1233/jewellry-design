@@ -13,7 +13,7 @@ export const Header = ({ locale }: HeaderProps) => {
 		<>
 		<FixedTopBar/>
 		
-		<header className='flex justify-between items-center px-4 md:px-10 pt-2 md:pt-8 relative z-20'>
+		<header className='flex justify-between items-center px-4 md:px-10 pt-8 relative z-20'>
 			<div>
 				<MenuSheet locale={locale} />
 			</div>

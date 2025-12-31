@@ -27,11 +27,7 @@ const Collections : React.FC<Props>  = ({ locale = 'en' }) => {
     link: `${websiteUrl}/collections/bracelets`,
     title: ui["collection.bracelets"],
   },
-  {
-    image: "/collection/KETTINGEN.webp",
-    link: `${websiteUrl}/collections/pendants`,
-    title: ui["collection.pendants"],
-  },
+ 
   {
     image: "/collection/Hangers.webp",
     link: `${websiteUrl}/collections/pendants`,
