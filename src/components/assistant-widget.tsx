@@ -1,16 +1,15 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { setChatStore, useChatStore } from '~/store'
-import { getTranslationForLocale } from '~/i18n/ui'
-import { ImageIcon, MicIcon, XIcon } from 'lucide-react'
-import { downscaleBase64Image, makeBase64Image } from '~/lib/image-utils'
-import { AudioRecorder } from './audio-recorder'
 import { useMutation } from '@tanstack/react-query'
-import { queryClient } from '~/lib/query-client'
-import { Spinner } from './spinner'
-import { ImageGenerationMessageUI, InputMessageUI, OutputMessageUI } from '~/components/messages-ui'
-import { useRef as useReactRef } from 'react'
-import { useAssistantStream } from '~/hooks/use-assistant-stream'
+import { ImageIcon, MicIcon, XIcon } from 'lucide-react'
+import React, { useEffect, useMemo, useRef as useReactRef, useRef, useState } from 'react'
 import { UAParser } from 'ua-parser-js'
+import { ImageGenerationMessageUI, InputMessageUI, OutputMessageUI } from '~/components/messages-ui'
+import { useAssistantStream } from '~/hooks/use-assistant-stream'
+import { getTranslationForLocale } from '~/i18n/ui'
+import { downscaleBase64Image } from '~/lib/image-utils'
+import { queryClient } from '~/lib/query-client'
+import { setChatStore, useChatStore } from '~/store'
+import { AudioRecorder } from './audio-recorder'
+import { Spinner } from './spinner'
 
 type AssistantWidgetProps = {
 	locale: string
@@ -283,7 +282,7 @@ export const AssistantWidget = ({ locale }: AssistantWidgetProps) => {
 								<span className='text-2xl'>AI</span>
 							</div>
 							<span className='font-didot text-xl font-semibold text-gray-800'>
-								CYO Atelier Assistant
+								CYO Atelier Designer
 							</span>
 							<span className='mx-4 md:mx-20 font-didot text-center text-gray-600'>
 								{ui['assistant.description']}
@@ -295,7 +294,7 @@ export const AssistantWidget = ({ locale }: AssistantWidgetProps) => {
 							<div className='w-8 h-8 bg-primary rounded-full flex items-center text-center justify-center text-white font-bold mr-3'>
 								<span>AI</span>
 							</div>
-							<span className='font-semibold text-gray-800'>CYO Atelier Assistant</span>
+							<span className='font-semibold text-gray-800'>CYO Atelier Designer</span>
 						</div>
 					)}
 				{messages.map((msg, i) => (

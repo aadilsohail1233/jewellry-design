@@ -130,7 +130,7 @@ const ui: Translations = {
       "Thanks to the savoir-faire, creativity and excellence, CYO Design accompanies the happiest moments of life",
     "gifts.cta": "Enter the timeless universe",
 
-    "assistant.assistant": "AI Assistant",
+    "assistant.assistant": "AI Designer",
     "assistant.sendButton": "Send",
     "assistant.description": `I will help you design your dream jewelry.
   Just upload an inspiration photo, or tell me about the jewelry you want.
@@ -216,7 +216,7 @@ const ui: Translations = {
       "Dank Know-how, Kreativität und Exzellenz begleitet CYO Design die glücklichsten Momente des Lebens.",
     "gifts.cta": "Treten Sie in das zeitlose Universum ein",
 
-    "assistant.assistant": "KI-Assistent",
+    "assistant.assistant": "KI-Designer",
     "assistant.sendButton": "Senden",
     "assistant.description": `Ich helfe Ihnen, Ihr Traum-Schmuckstück zu entwerfen.
   Laden Sie ein Inspirationsfoto hoch oder erzählen Sie mir, welches Schmuckstück Sie möchten.
@@ -298,7 +298,7 @@ const ui: Translations = {
       "Grazie al savoir-faire, alla creatività e all’eccellenza, CYO Design accompagna i momenti più felici della vita",
     "gifts.cta": "Entra nell'universo senza tempo",
 
-    "assistant.assistant": "Assistente AI",
+    "assistant.assistant": "Designer di IA",
     "assistant.sendButton": "Invia",
     "assistant.description": `Ti aiuterò a disegnare il gioiello dei tuoi sogni.
   Carica una foto di ispirazione o parlami del gioiello che desideri.
@@ -380,7 +380,7 @@ const ui: Translations = {
       "Gracias al savoir-faire, la creatividad y la excelencia, CYO Design acompaña los momentos más felices de la vida",
     "gifts.cta": "Entra en el universo atemporal",
 
-    "assistant.assistant": "Asistente de IA",
+    "assistant.assistant": "Diseñador de IA",
     "assistant.sendButton": "Enviar",
     "assistant.description": `Te ayudaré a diseñar la joya de tus sueños.
   Simplemente sube una foto de inspiración o cuéntame sobre la joya que deseas.
@@ -463,11 +463,11 @@ const ui: Translations = {
       "Grâce au savoir-faire, à la créativité et à l'excellence, CYO Design accompagne les moments les plus heureux de la vie",
     "gifts.cta": "Entrez dans l’univers intemporel",
 
-    "assistant.assistant": "Assistant IA",
+    "assistant.assistant": "Designer IA",
     "assistant.sendButton": "Envoyer",
     "assistant.description": `Je vous aiderai à concevoir le bijou de vos rêves.
-  Téléchargez simplement une photo d'inspiration ou parlez-moi du bijou que vous souhaitez.
-  Vous pouvez me parler par texte ou par voix. Je vous aiderai, étape par étape.`,
+              Téléchargez simplement une photo d'inspiration ou parlez-moi du bijou que vous souhaitez.
+              Vous pouvez me parler par texte ou par voix. Je vous aiderai, étape par étape.`,
     "assistant.input.placeholder": "Décrivez le bijou de vos rêves...",
     "aboutus.aboutus": "À Propos de Nous",
     "aboutus.title": "Inspiré par vous, créé par nous.",
